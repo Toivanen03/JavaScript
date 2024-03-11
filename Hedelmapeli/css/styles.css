@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap');
+@media screen and (min-width: 1024px) {
+
+    :root {
+        --teksti: #333333;
+        --tausta: #f6e1f8;
+    }
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: 'Poppins', 'sans-serif';
+        background-color: var(--tausta);
+        color: var(--teksti);
+    }
+
+    .mobiili {
+        display: none;
+    }
+
+
+    main {
+        flex-grow: 1;
+        padding: 20px;
+    }
+
+
+    .btn-primary {
+        background-color: white;
+        border-color: var(--teksti);
+        color: var(--teksti);
+    }
+
+
+    .btn-primary:hover {
+        background-color: var(--tausta);
+        border-color: var(--teksti);
+        color: var(--teksti)
+    }
+
+
+    .btn-primary:active {
+        background-color: lightgray !important;
+        border-color: var(--teksti) !important;
+        color: var(--tausta) !important;
+    }
+
+
+    .pelialue {
+        box-shadow: 30px 30px 10px rgba(0, 0, 0, 0.4);
+        background-color: white;
+        border-color: lightgray;
+        border-style: outset;
+        border-width: 8px;
+        text-align: center;
+        height: 100%;
+        width: 680px;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    .nappulat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    .nappula-alue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 90%;
+        margin-bottom: auto;
+    }
+
+
+    .coinbox {
+        height: 40vh;
+    }
+
+
+    .tulosruutu {
+        width: 635px;
+        height: 8vh;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .tulosruutu img {
+        margin-top: -8px;
+        width: 11px;
+    }
+
+
+    .row {
+        padding: 10px;
+    }
+
+
+    .header-mobile {
+        display: none;
+    }
+
+
+    .footer-mobiili {
+        display: none;
+    }
+
+    
+    #ohjeLaatikko {
+        max-height: 600px;
+        overflow-y: auto;
+        border-style: solid;
+        border-width: 5px;
+        border-color: navy;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        background-color: lightskyblue;
+        padding: 10px;
+        text-align: left;
+        display: none;
+    }
+
+
+    #voittotalletus {
+        max-height: 600px;
+        overflow-y: auto;
+        border-style: solid;
+        border-width: 5px;
+        border-color: navy;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        background-color: lightskyblue;
+        padding: 10px;
+        text-align: left;
+        display: none;
+    }
+
+
+    #voittotalletusUusiPeli {
+        display: none;
+    }
+
+
+    #voittotalletusSulje {
+        display: none;
+    }
+
+
+    #peliLoppu {
+        max-height: 600px;
+        overflow-y: auto;
+        border-style: solid;
+        border-width: 5px;
+        border-color: navy;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        background-color: lightskyblue;
+        padding: 10px;
+        text-align: left;
+        display: none;
+    }
+
+    
+    #ohjeLaatikko #sulje {
+        cursor: pointer;
+        float: right;
+        font-weight: bold;
+        width: 25px;
+        height: 25px;
+    }
+
+
+    .fontti {
+        background: linear-gradient(to right, red, rgb(241, 159, 8), red);
+        -webkit-background-clip: text;
+        font-family: 'Comic Neue';
+        font-weight: bolder;
+        background-clip: text;
+        color: transparent;
+    }
+
+
+    #win {
+        width: 635px;
+        position: absolute;
+        top: 24vh;
+        left: 28vw;
+    }
+
+
+    .kelat {
+        height: 20vh;
+        margin-bottom: -1.2vh;
+        background-size: contain;
+    }
+
+
+    .kelat img {
+        width: 48px;
+        height: 101px;
+    }
+
+
+    #ekaKela {
+        margin-left: 25.8%;
+        margin-right: -14.85%;
+    }
+    #tokaKela {
+        margin-right: -14.85%;
+    }
+    #kolmasKela {
+        margin-right: -14.8%;
+    }
+    #neljasKela {
+        margin-right: 9.55%;
+    }
+
+
+    #panosPainike:hover {
+        cursor: pointer;
+    }
+    #panosPainike:active {
+        zoom: 0.9;
+        margin-left: 0.44vw;
+        margin-top: 0.5vh;
+    }
+
+
+    #kaynnista:hover {
+        cursor: pointer;
+    }
+    #kaynnista:active {
+        zoom: 0.9;
+        margin-left: 0.44vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.1vh;
+    }
+
+
+    #ohjepainike:hover {
+        cursor: pointer;
+    }
+    #ohjepainike:active {
+        zoom: 0.9;
+        margin-left: 0.461vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.1vh;
+    }
+
+
+    #voitonmaksupainike:hover {
+        cursor: pointer;
+    }
+    #voitonmaksupainike:active {
+        zoom: 0.9;
+        margin-left: 0.461vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.1vh;
+    }
+
+
+    #lukko1:hover {
+        cursor: pointer;
+    }
+    #lukko1:active {
+        zoom: 0.9;
+        margin-left: 0.461vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.1vh;
+    }
+
+
+    #lukko2:hover {
+        cursor: pointer;
+    }
+    #lukko2:active {
+        zoom: 0.9;
+        margin-left: 0.461vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.1vh;
+    }
+
+
+    #lukko3:hover {
+        cursor: pointer;
+    }
+    #lukko3:active {
+        zoom: 0.9;
+        margin-left: 0.461vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.1vh;
+    }
+
+
+    #lukko4:hover {
+        cursor: pointer;
+    }
+    #lukko4:active {
+        zoom: 0.9;
+        margin-left: 0.461vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.1vh;
+    }
+
+
+    .lukot {
+        width: 60;
+        margin-right: -0.5vw
+    }
+
+
+    #panosEkaNro {
+        margin-left: 0px;
+    }
+    #panosTokaNro {
+        margin-left: 4px;
+    }
+    #viimVoittoEkaNro {
+        margin-left: -29px;
+    }
+    #viimVoittoTokaNro {
+        margin-left: 4px;
+    }
+    #viimVoittoKolmasNro {
+        margin-left: 4px;
+    }
+    #voitotEkaNro {
+        margin-left: -8px;
+    }
+    #voitotTokaNro {
+        margin-left: 4px;
+    }
+    #voitotKolmasNro {
+        margin-left: 4px;
+    }
+    #varauksetEkaNro {
+        margin-left: -4px;
+    }
+    #varauksetTokaNro {
+        margin-left: 4px;
+    }
+}
