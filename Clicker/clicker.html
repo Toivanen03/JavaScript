@@ -87,19 +87,38 @@
                     <h2 style="padding: 10px; background-color: palevioletred;"><strong>Klikkaa ideologisesti työtöntä ja nosta tukia!</strong></h2><br>
 
                     <div class="row">
-                        <div class="col-6" id="tausta">
-                            <div id="pelialue">
-                                <img id="ossiKuva" width="100%" height="auto" src="Kuvat/ossi.png" alt="Ideologisesti työtön Ossi Nyman" usemap="#ossiMap">
+                        <div class="col-6 d-flex" id="tausta">
+                            <div class="alue">
+                                <img id="ossiKuvaSelain" width="100%" height="auto" src="Kuvat/ossi.png" alt="Ideologisesti työtön Ossi Nyman" usemap="#ossiMapSelain">
                                 <div class="ossiHead">
-                                    <map name="ossiMap">
-                                        <area shape="circle" coords="400%, 260%, 50%" onclick="clickOssi()">
+                                    <map name="ossiMapSelain">
+                                        <area shape="circle" coords="400%, 270%, 70%" onclick="clickOssi()">
+                                    </map>
+                                </div>
+                            </div>
+
+                            <div class="alueMobiili">
+                                <img id="ossiKuvaMobiili" width="100%" height="auto" src="Kuvat/ossi.png" alt="Ideologisesti työtön Ossi Nyman" usemap="#ossiMapMobiili">
+                                <div class="ossiHead">
+                                    <map name="ossiMapMobiili">
+                                       <area shape="circle" coords="85%, 55%, 35%" onclick="clickOssi()">
+                                    </map>
+                                </div>
+                            </div>
+
+                            <div class="alueMobiiliVaaka">
+                                <img id="ossiKuvaMobiiliVaaka" width="100%" height="auto" src="Kuvat/ossi.png" alt="Ideologisesti työtön Ossi Nyman" usemap="#ossiMapMobiiliVaaka">
+                                <div class="ossiHead">
+                                    <map name="ossiMapMobiiliVaaka">
+                                       <area shape="circle" coords="185%, 105%, 35%" onclick="clickOssi()">
                                     </map>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-6" id="tulokset">
-                            <div class="row" style="margin-bottom: 1vw;">
+                            <span id="mobiiliPisteet"></span>
+                            <div class="row kolikot" style="margin-bottom: 1vw;">
                                 <div class="col-10 d-flex justify-content-center" style="margin-left: 2vw;">
                                     <img src="Kuvat/euro_rotating.gif" id="ege1" height="60px">
                                     <img src="Kuvat/euro_rotating.gif" id="ege2" height="60px">
@@ -109,7 +128,7 @@
                                 </div>
                             </div>
                         
-                            <div class="row" style="margin-bottom: 1vw;">
+                            <div class="row tulokset" style="margin-bottom: 1vw;">
                                 <div class="col-10 d-flex justify-content-center" style="margin-left: 2vw;">
                                     <span id="miljardit"></span>
                                     <span id="sadatmillit"></span>
@@ -124,16 +143,18 @@
                                 </div>
                             </div>
 
-                            <div class="row" style="margin-top: 4vw; align-self: center;">
+                            <div class="row saavutusSelain" style="margin-top: 4vw; align-self: center;">
                                 <div class="col-10 d-flex">
-                                    <div id="saavutusLaatikko" class="piilotettu varjo feidaus" style="margin-left: 12vw; margin-top: 3vw;">
-                                        <span id="saavutusTeksti" style="margin-bottom: 1vw;"><strong>Virstanpylväs saavutettu!</strong></span>
-                                        <img id="sulje" src="Kuvat/close.png" alt="Sulje" onclick="suljeSaavutus()" style="margin-left: 2vw;">
+                                    <div id="saavutusLaatikkoSelain" class="piilotettu varjo feidaus" style="margin-left: 12vw; margin-top: 3vw;">
+                                        <span id="saavutusTekstiSelain" style="margin-bottom: 1vw;"><strong>Virstanpylväs saavutettu!</strong></span>
+                                        <img id="suljeSelain" src="Kuvat/close.png" alt="Sulje" onclick="suljeSaavutusSelain()" style="margin-left: 2vw;">
                                         <p></p>
-                                        <p class="fontti" id="seloste"></p>
+                                        <p class="fontti" id="selosteSelain"></p>
                                     </div>
                                 </div>
                             </div>
+
+
 
                             <div id="musiikki" style="margin-bottom: -3vw;">
                                 <div class="row fontti">
@@ -145,17 +166,17 @@
                                     </div>
                                 </div>
 
-                                <div class="row">    
+                                <div class="row musiikkiRivi">    
                                     <div class="col d-flex">                                   
-                                        <div>
+                                        <div class="musiikkiVolume">
                                             <input type="radio" id="musiikkiLo" name="mVolume" value="musiikkiLo" onchange="mVoimakkuus(0.2)" checked>
                                             <label for="musiikkiLo" style="margin-left: 5px; margin-right: 8px;">Matala</label>
                                         </div>
-                                        <div>
+                                        <div class="musiikkiVolume">
                                             <input type="radio" id="musiikkiMid" name="mVolume" value="musiikkiMid" onchange="mVoimakkuus(0.6)">
                                             <label for="musiikkiMid" style="margin-left: 5px; margin-right: 8px;">Normaali</label>
                                         </div>
-                                        <div>
+                                        <div class="musiikkiVolume">
                                             <input type="radio" id="musiikkiFull" name="mVolume" value="musiikkiFull" onchange="mVoimakkuus(1)">
                                             <label for="musiikkiFull" style="margin-left: 5px; margin-right: 8px;">Täysi</label>
                                         </div>                                    
@@ -163,15 +184,15 @@
                                     </div>
 
                                     <div class="col d-flex">
-                                        <div>
+                                        <div class="efektiVolume">
                                             <input type="radio" id="efektiLo" name="eVolume" value="efektiLo" onchange="eVoimakkuus(0.2)" checked>
                                             <label for="efektiLo" style="margin-left: 5px; margin-right: 8px;">Matala</label>
                                         </div>
-                                        <div>
+                                        <div class="efektiVolume">
                                             <input type="radio" id="efektiMid" name="eVolume" value="efektiMid" onchange="eVoimakkuus(0.6)">
                                             <label for="efektiMid" style="margin-left: 5px; margin-right: 8px;">Normaali</label>
                                         </div>
-                                        <div>
+                                        <div class="efektiVolume">
                                             <input type="radio" id="efektiFull" name="eVolume" value="efektiFull" onchange="eVoimakkuus(1)">
                                             <label for="efektiFull" style="margin-left: 5px; margin-right: 8px; margin-bottom: 1vh;">Täysi</label>
                                         </div>                                        
@@ -188,18 +209,33 @@
                                     </div>
                                 </div>
 
-                                <div class="row">                                        
+                                <div class="row selain">                                        
                                     <div style="margin-top: 10px; margin-left: 13vw; margin-right: auto; margin-bottom: -8vh;"> 
                                         <button onclick="nollaaPisteet()" class="fontti">Nollaa pisteet</button>                               
                                     </div>
                                 </div>
-                            </div>                           
+                            </div> 
                         </div>
                     </div>   
-                    <script src="clicker.js"></script>
+                </div>
+                <div class="row saavutusMobiili" style="margin-top: 4vw; align-self: center;">
+                    <div class="col d-flex">
+                        <div id="saavutusLaatikkoMobiili" class="piilotettu varjo feidaus">
+                            <span id="saavutusTekstiMobiili" style="margin-bottom: 1vw;"><b>Virstanpylväs saavutettu!</b></span>
+                            <img id="suljeMobiili" src="Kuvat/close.png" alt="Sulje" onclick="suljeSaavutusMobiili()" style="margin-left: 2vw;">
+                            <p></p>
+                            <p class="fontti" id="selosteMobiili"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center mobiili">
+                    <div class="sulkuNappi mobiili">
+                        <button onclick="nollaaPisteet()" class="fontti">Nollaa pisteet</button>                               
+                    </div>
                 </div>
             </div>
         </div>
+        <script src="clicker.js"></script>
     </main>
 
 

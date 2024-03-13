@@ -56,124 +56,134 @@ function clickOssi() {
     localStorage.setItem('pisteet', pisteet.toString());
     localStorage.setItem('nopeus', nopeus.toString());
     if (pisteet === 10) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Tukesi riittävät vihkoon ja lyijykynään. Tiesi kirjailijaksi on alkamassa!");
-        saavutus(saavutusTeksti);
+        viesti = ("Tukesi riittävät vihkoon ja lyijykynään. Tiesi kirjailijaksi on alkamassa!");
+        saavutus(viesti);
         musiikkiNopeus(1.1);
     }
     if (pisteet === 40) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Luovan tauon aika. Rahasi riittävät pieneen kossuun.");
-        saavutus(saavutusTeksti);
+        viesti = ("Luovan tauon aika. Rahasi riittävät pieneen kossuun.");
+        saavutus(viesti);
         musiikkiNopeus(1.2);
     }
     if (pisteet === 100) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Löydät kirpparilta käytetyn kirjoituskoneen.");
-        saavutus(saavutusTeksti);
+        viesti = ("Löydät kirpparilta käytetyn kirjoituskoneen.");
+        saavutus(viesti);
         musiikkiNopeus(1.3);
     }
     if (pisteet === 500) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Rahasi riittävät jo läppäriin. Nyt alkaa Lyyti kirjoittamaan!");
-        saavutus(saavutusTeksti);
+        viesti = ("Rahasi riittävät jo läppäriin. Nyt alkaa Lyyti kirjoittamaan!");
+        saavutus(viesti);
         musiikkiNopeus(1.4);
     }
     if (pisteet === 1000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Ensimmäinen sivu valmis. Kolauspäivän kunniaksi Kontulan Himabaariin yhdelle!");
-        saavutus(saavutusTeksti);
+        viesti = ("Ensimmäinen sivu valmis. Kolauspäivän kunniaksi Kontulan Himabaariin yhdelle!");
+        saavutus(viesti);
         musiikkiNopeus(1.5);
     }
     if (pisteet === 10000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Ensimmäinen luku valmis. Kelan rahat riittävät tänään keskustaan asti. Roskabaariin!");
-        saavutus(saavutusTeksti);
+        viesti = ("Ensimmäinen luku valmis. Kelan rahat riittävät tänään keskustaan asti. Roskabaariin!");
+        saavutus(viesti);
         musiikkiNopeus(1.6);
     }
     if (pisteet === 100000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Aki, Make ja Pera tulivat kylään ja joivat rahasi. Onneksi ensi viikolla kolahtaa taas.");
-        saavutus(saavutusTeksti);
+        viesti = ("Aki, Make ja Pera tulivat kylään ja joivat rahasi. Onneksi ensi viikolla kolahtaa taas.");
+        saavutus(viesti);
         musiikkiNopeus(1.7);
     }
     if (pisteet === 1000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Kahden kuukauden ryyppäämisen jälkeen jatkat kirjoittamista.");
-        saavutus(saavutusTeksti);
+        viesti = ("Kahden kuukauden ryyppäämisen jälkeen jatkat kirjoittamista.");
+        saavutus(viesti);
         musiikkiNopeus(1.8);
     }
     if (pisteet === 10000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ('Iltahömppä kirjoittaa sinusta "uutisen". Olet julkkis!');
-        saavutus(saavutusTeksti);
+        viesti = ('Iltahömppä kirjoittaa sinusta "uutisen". Olet julkkis!');
+        saavutus(viesti);
         musiikkiNopeus(1.9);
     }
     if (pisteet === 100000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Kirjasi on valmis. Päätät juhlistaa saavutustasi pienellä päiväkännillä.");
-        saavutus(saavutusTeksti);
+        viesti = ("Kirjasi on valmis. Päätät juhlistaa saavutustasi pienellä päiväkännillä.");
+        saavutus(viesti);
         musiikkiNopeus(2);
     }
     if (pisteet === 200000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Kirjasi julkaistaan. Hip hei!");
-        saavutus(saavutusTeksti);
+        viesti = ("Kirjasi julkaistaan. Hip hei!");
+        saavutus(viesti);
         musiikkiNopeus(2.1);
     }
     if (pisteet === 300000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Kukaan osta kirjaasi, mutta onneksi tuet juoksevat!");
-        saavutus(saavutusTeksti);
+        viesti = ("Kukaan osta kirjaasi, mutta onneksi tuet juoksevat!");
+        saavutus(viesti);
         musiikkiNopeus(2.2);
     }
     if (pisteet === 500000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Teostasi on myyty jo kymmenen kappaletta. Olet kohta maksanut velkasi yhteiskunnalle!");
-        saavutus(saavutusTeksti);
+        viesti = ("Teostasi on myyty jo kymmenen kappaletta. Olet kohta maksanut velkasi yhteiskunnalle!");
+        saavutus(viesti);
         musiikkiNopeus(2.3);
     }
     if (pisteet === 1000000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Aloitat uuden kirjan kirjoittamisen.");
-        saavutus(saavutusTeksti);
+        viesti = ("Aloitat uuden kirjan kirjoittamisen.");
+        saavutus(viesti);
         musiikkiNopeus(2.4);
     }
     if (pisteet === 2000000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Luova tauko. Kukaan ei osta kirjojasi.")
-        saavutus(saavutusTeksti);
+        viesti = ("Luova tauko. Kukaan ei osta kirjojasi.")
+        saavutus(viesti);
         musiikkiNopeus(2.5);
     }
     if (pisteet === 3000000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Iltahömppä kirjoittaa sielunkumppanistasi. Muutat yhteen Alma Tuuvan kanssa.")
-        saavutus(saavutusTeksti);
+        viesti = ("Iltahömppä kirjoittaa sielunkumppanistasi. Muutat yhteen Alma Tuuvan kanssa.")
+        saavutus(viesti);
         musiikkiNopeus(2.6);
     }
     if (pisteet === 4000000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Kela aloittaa liikaa maksetun asumistuen takaisinperinnän. Kännit hiluilla.")
-        saavutus(saavutusTeksti);
+        viesti = ("Kela aloittaa liikaa maksetun asumistuen takaisinperinnän. Kännit hiluilla.")
+        saavutus(viesti);
         musiikkiNopeus(2.7);
     }
     if (pisteet === 7000000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Jatkat toista teostasi.")
-        saavutus(saavutusTeksti);
+        viesti = ("Jatkat toista teostasi.")
+        saavutus(viesti);
         musiikkiNopeus(2.8);
     }
     if (pisteet === 8000000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Toinen kirjasi valmistuu.")
-        saavutus(saavutusTeksti);
+        viesti = ("Toinen kirjasi valmistuu.")
+        saavutus(viesti);
         musiikkiNopeus(2.9);
     }
     if (pisteet === 9000000000) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Toista kirjaasi myydään lähes tusinan verran!")
-        saavutus(saavutusTeksti);
+        viesti = ("Toista kirjaasi myydään lähes tusinan verran!")
+        saavutus(viesti);
         musiikkiNopeus(3);
     }
     if (pisteet === 9999999999) {
-        saavutusTeksti = document.getElementById("seloste").innerHTML = ("Olet täysiverinen sossupummi ja elämäntapataiteilija. Onneksi olkoon!")
-        saavutus(saavutusTeksti);
+        viesti = ("Olet täysiverinen sossupummi ja elämäntapataiteilija. Onneksi olkoon!")
+        saavutus(viesti);
         musiikkiNopeus(1);
-        pisteet = 0;
     }
+
     updateScore();
     showImage();
     playEfekti();
 }
 
-function saavutus() {
-    document.getElementById("saavutusLaatikko").style.display = "block";
-    setTimeout(function () {
-        document.getElementById("saavutusLaatikko").style.display = "none";
-    }, 20000);
+function saavutus(viesti) {
+    if (window.innerWidth <= 1023) {
+        saavutusTekstiMobiili = document.getElementById("selosteMobiili").innerHTML = viesti;
+        document.getElementById("saavutusLaatikkoMobiili").style.display = "block";
+        setTimeout(function () {
+            document.getElementById("saavutusLaatikkoMobiili").style.display = "none";
+        }, 20000);
+    } else {
+        saavutusTekstiSelain = document.getElementById("selosteSelain").innerHTML = viesti;
+        document.getElementById("saavutusLaatikkoSelain").style.display = "block";
+        setTimeout(function () {
+            document.getElementById("saavutusLaatikkoSelain").style.display = "none";
+        }, 20000);
+    }
 }
 
 function updateScore() {
+    document.getElementById("mobiiliPisteet").innerHTML = "Pisteet: " + pisteet;
     scoreCalc(pisteet);
     
 }
@@ -181,10 +191,20 @@ function updateScore() {
 function showImage() {
     let image = document.createElement("img");
     image.src = "Kuvat/kela.png";
-    image.style.width = "200px";
     image.style.position = "absolute";
-    image.style.left = (event.pageX - image.width / 2 + window.scrollX + 70) + "px";
-    image.style.top = (event.pageY - image.height / 2 + window.scrollY - 270) + "px";
+    if (window.innerWidth <= 1023 && window.matchMedia("(orientation: landscape)").matches){
+        image.style.width = "100px";
+        image.style.left = (event.pageX - image.width / 2 + window.scrollX + 260) + "px";
+        image.style.top = (event.pageY - image.height / 2 + window.scrollY - 80) + "px";
+    } else if (window.innerWidth <= 1023) {
+        image.style.width = "100px";
+        image.style.left = (event.pageX - image.width / 2 + window.scrollX + 140) + "px";
+        image.style.top = (event.pageY - image.height / 2 + window.scrollY - 20) + "px";
+    } else {
+        image.style.width = "200px";
+        image.style.left = (event.pageX - image.width / 2 + window.scrollX + 230) + "px";
+        image.style.top = (event.pageY - image.height / 2 + window.scrollY - 270) + "px";
+    }
     document.body.appendChild(image);
     image.style.display = "block";
     image.classList.add("animaatio");
@@ -219,6 +239,10 @@ function scoreCalc(pisteet) {
     document.getElementById("ykköset").innerHTML = numerot[pisteet % 10];
 }
 
-function suljeSaavutus() {
-    document.getElementById("saavutusLaatikko").style.display = "none";
+function suljeSaavutusSelain() {
+    document.getElementById("saavutusLaatikkoSelain").style.display = "none";
+}
+
+function suljeSaavutusMobiili() {
+    document.getElementById("saavutusLaatikkoMobiili").style.display = "none";
 }
