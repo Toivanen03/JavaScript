@@ -928,9 +928,6 @@ function lisaVoittoMahdollisuus() {                     //Funktiossa arvotaan li
 
 
 function tarkistaTulos() {
-    if (lukitusKaytetty) {
-        poistaLukitukset();
-    }
     let odotus = setInterval(function() {           //Tarkkaillaan pelitilanteen tulosta, eli voittolinjalle jääviä kuvioita.
         if (kierrosValmis && !lisaVoitto) {
             clearInterval(odotus);
@@ -972,6 +969,8 @@ function tarkistaVoitto(tulosEkaKuva, tulosTokaKuva, tulosKolmasKuva, tulosNelja
     }
     if (voittoSaatu) {
         laskeVoitto(voittorivi);
+    } else if (!voittoSaatu && lukitusKaytetty) {
+        tarkistaSaldo();
     } else {
         if (!lisaVoitto && !lukitusKaytetty) {              //Lisävoittoarvontaa kutsutaan vain uudella kierroksella, ei tilanteessa,
             voittorivi = lisaVoittoMahdollisuus();          //jossa keloja on ollut lukittuina.
@@ -993,6 +992,9 @@ function tarkistaVoitto(tulosEkaKuva, tulosTokaKuva, tulosKolmasKuva, tulosNelja
         }
     }
     kierros = 0;
+    if (lukitusKaytetty) {
+        poistaLukitukset();
+    }
 }
 
 
