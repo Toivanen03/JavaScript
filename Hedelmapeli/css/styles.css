@@ -2,11 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap');
 @media screen and (min-width: 1024px) {
 
+
+/*     PÄÄMUOTOILUT     */
+
     :root {
         --teksti: #333333;
         --tausta: #f6e1f8;
     }
-
 
     body {
         margin: 0;
@@ -20,16 +22,40 @@
         color: var(--teksti);
     }
 
-    .mobiili {
-        display: none;
-    }
-
-
     main {
         flex-grow: 1;
         padding: 20px;
     }
 
+    .row {
+        padding: 10px;
+    }
+
+    h1{
+        margin-bottom: 30px;
+    }
+
+    .mobiiliPysty {
+        display: none;
+    }
+
+    .mobiiliVaaka {
+        display: none;
+    }
+
+    .fontti {
+        background: linear-gradient(to right, red, rgb(241, 159, 8), red);
+        -webkit-background-clip: text;
+        font-family: 'Comic Neue';
+        font-weight: bolder;
+        background-clip: text;
+        color: transparent;
+    }
+
+
+
+
+/*     HEADER, FOOTER ym. MUOTOILUT     */
 
     .btn-primary {
         background-color: white;
@@ -51,6 +77,23 @@
         color: var(--tausta) !important;
     }
 
+    .header-mobile {
+        display: none;
+    }
+
+
+    .footer-mobiili {
+        display: none;
+    }
+
+
+
+
+/*     PELIALUEEN POHJAMUOTOILUT     */
+
+    .voittotaulukkoMobiili {
+        display: none;
+    }
 
     .pelialue {
         box-shadow: 30px 30px 10px rgba(0, 0, 0, 0.4);
@@ -68,24 +111,16 @@
     }
 
 
-    .nappulat {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-
-    .nappula-alue {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        height: 90%;
-        margin-bottom: auto;
+    #win {
+        width: 635px;
+        position: absolute;
+        top: 24vh;
+        left: 28vw;
     }
 
 
     .coinbox {
+        padding: 0;
         height: 40vh;
     }
 
@@ -101,28 +136,22 @@
         margin-right: auto;
     }
 
-
     .tulosruutu img {
         margin-top: -8px;
         width: 11px;
     }
 
-
-    .row {
-        padding: 10px;
-    }
-
-
-    .header-mobile {
-        display: none;
-    }
-
-
-    .footer-mobiili {
-        display: none;
-    }
-
     
+
+
+/*     VIESTIEN MUOTOILUT     */
+
+    .viesti {
+        font-size: 20px;
+        text-align: center;
+    }
+
+
     #ohjeLaatikko {
         max-height: 600px;
         overflow-y: auto;
@@ -138,6 +167,14 @@
         padding: 10px;
         text-align: left;
         display: none;
+    }
+
+    #ohjeLaatikko #sulje {
+        cursor: pointer;
+        float: right;
+        font-weight: bold;
+        width: 25px;
+        height: 25px;
     }
 
 
@@ -158,11 +195,9 @@
         display: none;
     }
 
-
     #voittotalletusUusiPeli {
         display: none;
     }
-
 
     #voittotalletusSulje {
         display: none;
@@ -186,33 +221,28 @@
         display: none;
     }
 
-    
-    #ohjeLaatikko #sulje {
-        cursor: pointer;
-        float: right;
-        font-weight: bold;
-        width: 25px;
-        height: 25px;
+
+
+
+/*     PAINIKKEIDEN MUOTOILUT     */
+
+    .nappulat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nappula-alue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 90%;
+        margin-bottom: auto;
     }
 
 
-    .fontti {
-        background: linear-gradient(to right, red, rgb(241, 159, 8), red);
-        -webkit-background-clip: text;
-        font-family: 'Comic Neue';
-        font-weight: bolder;
-        background-clip: text;
-        color: transparent;
-    }
-
-
-    #win {
-        width: 635px;
-        position: absolute;
-        top: 24vh;
-        left: 28vw;
-    }
-
+    /* KELAT */
 
     .kelat {
         height: 20vh;
@@ -220,12 +250,10 @@
         background-size: contain;
     }
 
-
     .kelat img {
         width: 48px;
         height: 101px;
     }
-
 
     #ekaKela {
         margin-left: 25.8%;
@@ -242,6 +270,12 @@
     }
 
 
+    /* PANOS */
+
+    .panos {
+        width: 60px
+    }
+
     #panosPainike:hover {
         cursor: pointer;
     }
@@ -251,6 +285,16 @@
         margin-top: 0.5vh;
     }
 
+
+    /* KÄYNNISTYS */
+
+    .divStartNappi {
+        margin-left: 0;
+    }
+
+    .startNappi {
+        width: 60px
+    }
 
     #kaynnista:hover {
         cursor: pointer;
@@ -263,6 +307,13 @@
     }
 
 
+    /* OHJE */
+
+    .ohje {
+        margin-right: -0.5vw;
+        width: 60px
+    }
+
     #ohjepainike:hover {
         cursor: pointer;
     }
@@ -273,6 +324,13 @@
         margin-bottom: 0.1vh;
     }
 
+
+    /* VOITONMAKSU */
+
+    .voitonmaksu {
+        width: 60px;
+        margin-right: 0;
+    }
 
     #voitonmaksupainike:hover {
         cursor: pointer;
@@ -285,6 +343,15 @@
     }
 
 
+    /* LUKITUS */
+
+    .lukot {
+        width: 60;
+        margin-right: -0.5vw
+    }
+
+        /* Lukko 1 */
+
     #lukko1:hover {
         cursor: pointer;
     }
@@ -295,6 +362,7 @@
         margin-bottom: 0.1vh;
     }
 
+        /* Lukko 2 */
 
     #lukko2:hover {
         cursor: pointer;
@@ -306,6 +374,7 @@
         margin-bottom: 0.1vh;
     }
 
+        /* Lukko 3 */
 
     #lukko3:hover {
         cursor: pointer;
@@ -317,6 +386,7 @@
         margin-bottom: 0.1vh;
     }
 
+        /* Lukko 4 */    
 
     #lukko4:hover {
         cursor: pointer;
@@ -329,11 +399,26 @@
     }
 
 
-    .lukot {
-        width: 60;
-        margin-right: -0.5vw
+    /* TYHJÄT */
+
+    .ekaTyhjaVali {
+        width: 60px;
+        margin-right: 1.75vw;
     }
 
+    .tokaTyhjaVali {
+        width: 60px;
+    }
+
+    .kolmasTyhjaVali {
+        width: 60px;
+        margin-left: 1.75vw;
+    }
+
+
+/*     SALDONÄYTTÖ     */
+
+    /* PANOS */
 
     #panosEkaNro {
         margin-left: 0px;
@@ -341,6 +426,10 @@
     #panosTokaNro {
         margin-left: 4px;
     }
+
+
+    /* VIIMEISIN VOITTO */
+
     #viimVoittoEkaNro {
         margin-left: -29px;
     }
@@ -350,6 +439,10 @@
     #viimVoittoKolmasNro {
         margin-left: 4px;
     }
+
+
+    /* VOITOT */
+
     #voitotEkaNro {
         margin-left: -8px;
     }
@@ -359,6 +452,10 @@
     #voitotKolmasNro {
         margin-left: 4px;
     }
+
+
+    /* PELIVARAUKSET */
+
     #varauksetEkaNro {
         margin-left: -4px;
     }

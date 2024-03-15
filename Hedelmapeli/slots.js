@@ -658,9 +658,17 @@ function voittoPaivitys() {                 //Toimenpiteet voiton osuessa.
 
 function ilotulitus() {             //Voiton osuessa näytetään animoitu .gif pelikoneen päällä määrätyn ajan.
     setTimeout(function () {
-        document.getElementById("win").innerHTML = '<img src="Kuvat/win.gif" alt="ilotulitus">';
+        if (window.innerWidth <= 1023) {
+            document.getElementById("winMobiili").innerHTML = '<img src="Kuvat/win.gif" alt="ilotulitus">';
+        } else {
+            document.getElementById("win").innerHTML = '<img src="Kuvat/win.gif" alt="ilotulitus">';
+        }
         setTimeout(function () {
-            document.getElementById("win").innerHTML = "";
+            if (window.innerWidth <= 1023) {
+                document.getElementById("winMobiili").innerHTML = "";
+            } else {
+                document.getElementById("win").innerHTML = "";
+            }
         }, 2400);
     }, 800);
 }
@@ -837,6 +845,7 @@ function arvoKelaNelja(voittorivi, tahtiMaara) {
             index4++;
             kela4Paikka.innerHTML = '<img src=' + rivit[satunnainen4][Object.keys(rivit[satunnainen4])[kuva]] + ' alt="Kela 4">';
             }, 20);
+            tarkistaTulos();
         } else {
             let odotus = setInterval(function() {
                 kierrosValmis = true;
@@ -846,7 +855,6 @@ function arvoKelaNelja(voittorivi, tahtiMaara) {
             }, 1000);
         }
     }
-    tarkistaTulos();
 }
 
 
@@ -965,7 +973,6 @@ function tarkistaVoitto(tulosEkaKuva, tulosTokaKuva, tulosKolmasKuva, tulosNelja
     if (voittoSaatu) {
         laskeVoitto(voittorivi);
     } else {
-        tarkistaSaldo();
         if (!lisaVoitto && !lukitusKaytetty) {              //Lisävoittoarvontaa kutsutaan vain uudella kierroksella, ei tilanteessa,
             voittorivi = lisaVoittoMahdollisuus();          //jossa keloja on ollut lukittuina.
         }
